@@ -1,8 +1,3 @@
-// Insert Start - O(1)
-// Insert End - O(n)
-// Forward/Reverse Traverse - O(n)
-// Delete at Start O(1)
-// Delete at End-Index O(n)
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -65,7 +60,7 @@ struct Node *insert_at_beginning(struct Node *head, int data) {
   struct Node *ptr = (struct Node *)malloc(sizeof(struct Node));
 
   if (length(head) == 0) {
-    // printf(" Empty");
+    
     ptr->prev = NULL;
     ptr->data = data;
     ptr->next = NULL;
@@ -76,7 +71,7 @@ struct Node *insert_at_beginning(struct Node *head, int data) {
     ptr->next = head;
   }
 
-  // printf("########## %d ########## \n", ptr->data);
+
 
   return ptr;
 }
@@ -99,7 +94,7 @@ struct Node *insert_at_end(struct Node *head, int data) {
   ptr->data = data;
   ptr->next = NULL;
 
-  //   printf("########## %d ########## \n", ptr->data);
+ 
   return head;
 }
 
